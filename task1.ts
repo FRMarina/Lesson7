@@ -1,6 +1,15 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 // Написать функцию, которая будет удалять дубликаты из массива, при этом исходный массив не меняется
 
 // Использовать наиболее быстрое решение
 
 const array: number[] = [1, 5, 7, 8, 5, 8, 3];
+function deleteDuplicates() {
+  const result: number[] = [];
+  for (const e of array) {
+    if (!result.includes(e)) {
+      result.push(e);
+    }
+  }
+  return result;
+}
+console.log(deleteDuplicates());
